@@ -1,4 +1,5 @@
 import { Card, Flex, Stack, Text, ThemeIcon } from '@mantine/core'
+import { memo } from 'react'
 
 type DashboardCardProps = {
   label: string
@@ -6,7 +7,7 @@ type DashboardCardProps = {
   description?: string
   icon: React.ElementType
 }
-export const DashboardCard = (props: DashboardCardProps) => {
+export const DashboardCard = memo((props: DashboardCardProps) => {
   const { label, value, description, icon: Icon } = props
 
   return (
@@ -56,4 +57,4 @@ export const DashboardCard = (props: DashboardCardProps) => {
       </Flex>
     </Card>
   )
-}
+})

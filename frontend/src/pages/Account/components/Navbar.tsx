@@ -3,7 +3,7 @@ import classes from './Navbar.module.css'
 import { Burger, Drawer, Group, Stack } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { Link, usePage } from '@inertiajs/react'
-import { normalizePathname } from '@shared/lib/normalizePathname'
+import { normalizePathname } from '@shared/lib/helpers/normalizePathname'
 
 export const Navbar: React.FC = React.memo(() => {
   const { props: pageProps, url } = usePage()

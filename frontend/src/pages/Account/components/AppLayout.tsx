@@ -15,7 +15,8 @@ export const AppLayout: React.FC<TProps> = (props) => {
   return (
     <Flex direction="column" mih="100vh">
       <Header />
-      <Flex align="stretch" style={{ flex: 1 }}>
+      {/* на большом дисплее 4к контент размазывается, поэтому ограничили ширину 1600px*/}
+      <Flex w="100%" flex={1} maw={1600} align="stretch" mx="auto">
         <Navbar />
         <SectionLayout>{children}</SectionLayout>
       </Flex>

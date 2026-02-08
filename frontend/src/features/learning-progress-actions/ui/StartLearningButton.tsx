@@ -1,12 +1,14 @@
 import { Button } from '@mantine/core'
 import { IconChevronRight } from '@tabler/icons-react'
 
-type TProps = {
+interface IProps {
   onAction: () => void
   children: React.ReactNode
 }
-export const StartLearningButton: React.FC<TProps> = (props) => {
-  const { children, onAction } = props
+export const StartLearningButton: React.FC<IProps> = ({
+  children,
+  onAction,
+}) => {
   return (
     <Button
       onClick={onAction}
